@@ -1,0 +1,20 @@
+-- C:\TechLevel\formacion\manuales TechLevel\análisis y diseño de bbdd\WorkShop\vuelos.sqs
+--
+-- Generated for Oracle 9i on Mon May 17  01:47:37 2004 by Server Generator 9.0.2.80.4
+ 
+PROMPT Creating Sequence 'EDA_SEQ'
+CREATE SEQUENCE EDA_SEQ
+ NOMAXVALUE
+ NOMINVALUE
+ NOCYCLE
+ NOCACHE
+/
+
+PROMPT Creating Sequence 'PLA_SEQ'
+CREATE SEQUENCE PLA_SEQ
+ NOMAXVALUE
+ NOMINVALUE
+ NOCYCLE
+ NOCACHE
+/
+
