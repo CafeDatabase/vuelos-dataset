@@ -1,5 +1,3 @@
--- C:\TechLevel\formacion\manuales TechLevel\análisis y diseño de bbdd\WorkShop\vuelos.sql
---
 -- Generated for Oracle 9i on Mon May 17  01:47:37 2004 by Server Generator 9.0.2.80.4
 
 
