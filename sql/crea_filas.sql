@@ -34,14 +34,14 @@ insert into tipos_vuelo(id_vuelo, cn_vuelo) values ('NAC','Nacional');
 PROMPT Valores para la tabla COMPANIAS
 PROMPT *********************************
 
-insert into companias(id_comp, cn_comp) values ('IBERI','Iberia');
-insert into companias(id_comp, cn_comp) values ('AIRNS','Air Nostrum');
-insert into companias(id_comp, cn_comp) values ('AIREU','Air Europa');
-insert into companias(id_comp, cn_comp) values ('SPNAI','Spanair');
-insert into companias(id_comp, cn_comp) values ('KLM','KLM');
-insert into companias(id_comp, cn_comp) values ('BRITA','British Airways');
-insert into companias(id_comp, cn_comp) values ('ALITA','Alitalia');
-insert into companias(id_comp, cn_comp) values ('AIFRA','Air France');
+insert into companias(id_comp, cn_comp) values ('IBERI','Aurea Air');
+insert into companias(id_comp, cn_comp) values ('AIRNS','Northwind Air');
+insert into companias(id_comp, cn_comp) values ('AIREU','Blue Meridian Airlines');
+insert into companias(id_comp, cn_comp) values ('SPNAI','Skyforge Airways');
+insert into companias(id_comp, cn_comp) values ('KLM','Kestrel Air Lines');
+insert into companias(id_comp, cn_comp) values ('BRITA','Britannic Skies');
+insert into companias(id_comp, cn_comp) values ('ALITA','Altavia Airlines');
+insert into companias(id_comp, cn_comp) values ('AIFRA','Aether France Air');
 PROMPT Valores para la tabla ESTADOSLABORALES
 PROMPT *********************************
 
@@ -56,21 +56,21 @@ insert into edades(eda_id, id_edad, rango_edad) values (3,'VEJ','Mayores de 50 a
 PROMPT Valores para la tabla TIPOS_RESERVAS
 PROMPT *********************************
 
-insert into tipos_reservas(id_treserva, cn_treserva) values ('TEL','Telef�nica');
+insert into tipos_reservas(id_treserva, cn_treserva) values ('TEL','Telefonica');
 insert into tipos_reservas(id_treserva, cn_treserva) values ('INT','Internet');
 insert into tipos_reservas(id_treserva, cn_treserva) values ('VEN','Venta directa');
 PROMPT Valores para la tabla EMPRESAS_VIAJES
 PROMPT *********************************
 
-insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('1','Viajes Iberica');
-insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('2','Viajes Halco');
-insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('3','Viajes Marta');
-insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('4','TuriViajes');
-insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('5','ViajeVacaciones');
+insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('1','Viajes Aurea');
+insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('2','Grupo Northwind Viajes');
+insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('3','Meridian Travel');
+insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('4','TuriNova');
+insert into empresas_viajes(id_emp_viaje, cn_emp_viaje) values ('5','VacayPlan');
 PROMPT Valores para la tabla PAISES
 PROMPT *********************************
 
-insert into paises(id_pais, cn_pais) values (1,'Espa�a');
+insert into paises(id_pais, cn_pais) values (1,'España');
 insert into paises(id_pais, cn_pais) values (2,'Portugal');
 insert into paises(id_pais, cn_pais) values (3,'Reino Unido');
 insert into paises(id_pais, cn_pais) values (4,'Francia');
@@ -86,7 +86,7 @@ insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (3,'Valencia',1);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (4,'Sevilla',1);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (5,'Pamplona',1);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (6,'Bilbao',1);
-insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (7,'M�laga',1);
+insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (7,'Malaga',1);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (8,'Santa Cruz de Tenerife',1);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (9,'Palma de Mallorca',1);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (10,'Lisboa',2);
@@ -95,12 +95,12 @@ insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (12,'Londres',3);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (13,'Manchester',3);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (14,'Liverpool',3);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (15,'Essex',3);
-insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (16,'Par�s',4);
-insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (17,'Lion',4);
+insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (16,'Paris',4);
+insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (17,'Lyon',4);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (18,'Berlin',5);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (19,'Bonn',5);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (20,'Munich',5);
-insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (21,'Washintong',6);
+insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (21,'Washinton',6);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (22,'Boston',6);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (23,'Chicago',6);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (24,'Los Angeles',6);
@@ -108,252 +108,69 @@ insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (25,'New York',6);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (26,'Denver',6);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (27,'Florencia',7);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (28,'Roma',7);
-insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (29,'Mil�n',7);
+insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (29,'Milan',7);
 insert into ciudades(id_ciudad,cn_ciudad,pai_id_pais) values (30,'Venecia',7);
 PROMPT Valores para la tabla AEROPUERTOS
 PROMPT *********************************
+-- España
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('BCN','Josep Tarradellas Barcelona-El Prat Airport',1);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('MAD','Adolfo Suárez Madrid-Barajas Airport',2);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('VLC','Valencia Airport',3);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('SVQ','Seville Airport',4);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('PNA','Pamplona Airport',5);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('BIO','Bilbao Airport',6);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('AGP','Málaga-Costa del Sol Airport',7);
+-- Santa Cruz de Tenerife: ciudad ↔ aeropuerto más cercano = Tenerife Norte (TFN)
+-- Segundo aeropuerto ficticio "Tenerife Sur"
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('TFN','Tenerife North Airport',8);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('TFS','Tenerife South Airport',8);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('PMI','Palma de Mallorca Airport',9);
+-- Portugal
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('LIS','Lisbon Airport',10);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('FNC','Madeira Airport',11);
+-- Reino Unido
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('LHR','Heathrow Airport',12);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('LGW','Gatwick Airport',12);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('MAN','Manchester Airport',13);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('LPL','Liverpool John Lennon Airport',14);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('STN','London Stansted Airport',15);
+-- Francia
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('CDG','Paris Charles de Gaulle Airport',16);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('ORY','Paris Orly Airport',16);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('LYS','Lyon-Saint Exupéry Airport',17);
+-- Alemania
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('BER','Berlin Brandenburg Airport',18);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('CGN','Cologne Bonn Airport',19);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('MUC','Munich Airport',20);
+-- Estados Unidos
+-- OJO: Washington tiene 2 aeropuertos típicos (DCA/IAD). El más “de ciudad” suele ser DCA.
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('DCA','Ronald Reagan Washington National Airport',21);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('IAD','Washington Dulles International Airport',21);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('BOS','Logan International Airport',22);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('ORD','O''Hare International Airport',23);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('LAX','Los Angeles International Airport',24);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('JFK','John F. Kennedy International Airport',25);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('DEN','Denver International Airport',26);
+-- Italia
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('FLR','Florence Airport',27);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('FCO','Rome Fiumicino Airport',28);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('MXP','Milan Malpensa Airport',29);
+insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('VCE','Venice Marco Polo Airport',30);
 
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('BCN','El Prat',1);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('MDR','Barajas',2);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('VLC','Valencia',3);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('SVL','Sevilla',4);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('PMP','Noain',5);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('BLC','Camposanto',6);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('BLB','Bilbao Norte',6);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('MLG','M�laga',7);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('SCZ','Santa Cruz',8);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('TFE','Tenerife Sur',8);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('PLM','Palma',9);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('LSB','Lisboa',10);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('MDE','Madeira',11);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('HEA','Headrow',12);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('LND','Londres',12);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('MNC','Manchester',13);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('LIV','Liverpool',14);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('ESX','Essex',15);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('VER','Versalles',16);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('PAR','Paris',16);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('LIO','Lion',17);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('BRL','Berlin',18);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('BON','Bonn',19);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('MUN','Munich',20);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('WSH','Washintong',21);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('BOS','Boston',22);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('CHI','Chicago',23);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('LAN','Los Angeles',24);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('NYR','New York',25);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('DNV','Denver',26);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('FLO','Florencia',27);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('ROM','Roma',28);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('MIL','Mil�n',29);
-insert into aeropuertos(id_aero,cn_aero,ciu_id_ciudad) values ('VEN','Venecia',30);
-PROMPT Valores para la tabla AGENCIAS
+PROMPT Valores para la tabla AGENCIAS (GENERADO)
 PROMPT *********************************
 
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (1,'Agencia1',1,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (2,'Agencia2',2,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (3,'Agencia3',3,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (4,'Agencia4',4,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (5,'Agencia5',5,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (6,'Agencia6',6,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (7,'Agencia7',6,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (8,'Agencia8',7,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (9,'Agencia9',8,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (10,'Agencia10',8,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (11,'Agencia11',9,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (12,'Agencia12',10,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (13,'Agencia13',11,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (14,'Agencia14',12,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (15,'Agencia15',12,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (16,'Agencia16',13,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (17,'Agencia17',14,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (18,'Agencia18',15,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (19,'Agencia19',16,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (20,'Agencia20',16,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (21,'Agencia21',17,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (22,'Agencia22',18,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (23,'Agencia23',19,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (24,'Agencia24',20,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (25,'Agencia25',21,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (26,'Agencia26',22,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (27,'Agencia27',23,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (28,'Agencia28',24,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (29,'Agencia29',25,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (30,'Agencia30',26,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (31,'Agencia31',27,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (32,'Agencia32',28,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (33,'Agencia33',29,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (34,'Agencia34',30,1);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (35,'HALCOBarcelona',1,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (36,'HALCOMadrid',2,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (37,'HALCOValencia',3,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (38,'HALCOSevilla',4,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (39,'HALCOPamplona',5,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (40,'HALCOBilbao',6,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (41,'HALCOBilbao',6,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (42,'HALCOM�laga',7,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (43,'HALCOSantaCruz1',8,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (44,'HALCOSantaCruz2',8,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (45,'HALCOPalma de Mallorca',9,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (46,'HALCOLisboa',10,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (47,'HALCOMadeira',11,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (48,'HALCOLondres',12,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (49,'HALCOLondres',12,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (50,'HALCOManchester',13,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (51,'HALCOLiverpool',14,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (52,'HALCOEssex',15,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (53,'HALCOPar�s',16,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (54,'HALCOPar�s',16,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (55,'HALCOLion',17,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (56,'HALCOBerlin',18,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (57,'HALCOBonn',19,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (58,'HALCOMunich',20,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (59,'HALCOWashintong',21,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (60,'HALCOChicago',23,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (61,'HALCOLos Angeles',24,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (62,'HALCONew York',25,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (63,'HALCODenver',26,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (64,'HALCOFlorencia',27,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (65,'HALCORoma',28,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (66,'HALCOMil�n',29,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (67,'HALCOVenecia',30,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (68,'HALCOBoston',22,2);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (69,'MARTABarcelona',1,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (70,'MARTAMadrid',2,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (71,'MARTAValencia',3,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (72,'MARTASevilla',4,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (73,'MARTAPamplona',5,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (74,'MARTABilbao',6,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (75,'MARTABilbao',6,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (76,'MARTAM�laga',7,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (77,'MARTASantaCruz1',8,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (78,'MARTASantaCruz2',8,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (79,'MARTAPalma de Mallorca',9,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (80,'MARTALisboa',10,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (81,'MARTAMadeira',11,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (82,'MARTALondres',12,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (83,'MARTALondres',12,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (84,'MARTAManchester',13,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (85,'MARTALiverpool',14,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (86,'MARTAEssex',15,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (87,'MARTAPar�s',16,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (88,'MARTAPar�s',16,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (89,'MARTALion',17,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (90,'MARTABerlin',18,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (91,'MARTABonn',19,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (92,'MARTAMunich',20,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (93,'MARTAWashintong',21,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (94,'MARTAChicago',23,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (95,'MARTALos Angeles',24,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (96,'MARTANew York',25,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (97,'MARTADenver',26,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (98,'MARTAFlorencia',27,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (99,'MARTARoma',28,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (100,'MARTAMil�n',29,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (101,'MARTAVenecia',30,3);
-insert into agencias(id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
- values (102,'MARTABoston',22,3);
+insert into agencias (id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
+select
+  age_seq.nextval,
+  -- Nombre neutro y consistente: <Empresa>-<Ciudad>
+  replace(ev.cn_emp_viaje,' ','') || '_' || replace(c.cn_ciudad,' ',''),
+  c.id_ciudad,
+  ev.id_emp_viaje
+from empresas_viajes ev
+cross join ciudades c;
+
+commit;
 
 PROMPT Valores para la tabla VUELOS-PLAZAS
 PROMPT *************************************

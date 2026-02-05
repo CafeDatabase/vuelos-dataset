@@ -19,7 +19,7 @@ Este repositorio contiene el **modelo VUELOS–RESERVAS** usado como base de eje
 1. Crear usuario (ejemplo):
 
 ```sql
-create user vuelos identified by vuelos default tablespace users;
+create user vuelos identified by vuelos default tablespace users quota unlimited on users;
 grant connect, resource to vuelos;
 ```
 

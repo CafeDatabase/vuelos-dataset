@@ -186,19 +186,17 @@ BEGIN
     dbms_output.put_line('----');
     dbms_output.put_line(v_msgs);
   END IF;
-
-  dbms_output.put_line('DATASET_'||v_status);
-
-  -- Firma final para VSCode/CI
-  if v_state = 'OK' then
+ 
+  -- Firma final para VSCode/CI (una sola línea)
+  if v_status = 'OK' then
     dbms_output.put_line('DATASET_OK');
-  elsif v_state = 'WARN' then
+  elsif v_status = 'WARN' then
     dbms_output.put_line('DATASET_WARN');
   else
     dbms_output.put_line('DATASET_FAIL');
     raise_application_error(-20001, 'Dataset inválido (FAIL).');
   end if;
-END;
-/
 
+end;
+/
 spool off
