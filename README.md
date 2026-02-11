@@ -26,7 +26,7 @@ grant connect, resource to vuelos;
 2. Ejecutar el instalador (SQL*Plus / SQLcl):
 
 ```sql
-@sql/install_random.sql
+@sql/install.sql
 ```
 
 El script ejecuta:
