@@ -4,7 +4,7 @@ set define off
 set echo on
 set feedback on
 
-@02_create_objects.sql
+@02_crea_objetos.sql
 @03_carga_random.sql
 @04_validacion.sql
 

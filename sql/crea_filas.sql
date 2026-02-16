@@ -1,6 +1,6 @@
 set echo off
  
--- NOTE: DBMS_OUTPUT is disabled during bulk load to avoid buffer overflow in SQL*Plus/SQLcl/SQL Developer.
+-- NOTA: DBMS_OUTPUT está deshabilitado durante la carga masiva para evitar el desbordamiento del búfer en SQL*Plus/SQLcl/SQL Developer.
 begin
   dbms_output.disable;
 end;
