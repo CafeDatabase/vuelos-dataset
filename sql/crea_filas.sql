@@ -236,7 +236,8 @@ begin
                               aer_id_aero_destino,
                               comp_id_comp,
                               tvue_id_vuelo,
-                              cat_id_catering)
+                              cat_id_catering,
+                              plazas_count)
              
               values (
                  contador_vuelos,
@@ -246,7 +247,13 @@ begin
                  t_aeropuertos((dbms_random.value)*num_ae).id_aero,
                  t_compania   ((dbms_random.value)*num_co).id_comp,
                  t_tipos_vuelo((dbms_random.value)*num_ti).id_vuelo,
-                 t_catering   ((dbms_random.value)*num_ca).id_catering
+                 t_catering   ((dbms_random.value)*num_ca).id_catering,
+                 CASE MOD(contador_vuelos, 4)
+                    WHEN 0 THEN 50
+                    WHEN 1 THEN 60
+                    WHEN 2 THEN 100
+                    ELSE 120
+                  END
                  );
      
                  contador_plazas:=0;
