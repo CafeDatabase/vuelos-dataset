@@ -1,12 +1,12 @@
--- One-shot installer for exploratory (random) dataset
--- Run as schema owner after creating the user.
+-- Instalador de un solo paso para el dataset exploratorio (aleatorio)
+-- Ejecutar como propietario del esquema después de crear el usuario.
 set define off
 set echo on
 set feedback on
 
 @02_create_objects.sql
-@03_load_random.sql
-@04_validate.sql
+@03_carga_random.sql
+@04_validacion.sql
 
 prompt
 prompt Instalación finalizada. Si el validador mostró WARN, el dataset es utilizable pero puede limitar algunos ejemplos.

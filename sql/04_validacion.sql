@@ -1,6 +1,6 @@
--- Minimal validator for the exploratory (random) dataset.
--- States: OK / WARN / FAIL
--- FAIL causes SQL*Plus to exit with non-zero status.
+-- Validador mínimo para el dataset exploratorio (aleatorio).
+-- Estados: OK / WARN / FAIL
+-- FAIL provoca que SQL*Plus salga con estado distinto de cero.
 
 set define off
 set feedback off
@@ -11,7 +11,7 @@ set trimspool on
 set serveroutput on size unlimited
 whenever sqlerror exit failure
 
-spool 04_validate.lst
+spool 04_validacion.lst
 
 DECLARE
   v_vuelos        NUMBER;
@@ -27,7 +27,7 @@ DECLARE
   v_status  VARCHAR2(10) := 'OK';
   v_msgs    CLOB := EMPTY_CLOB();
 
-  -- thresholds (agreed)
+  -- umbrales (acordados)
   c_min_vuelos    CONSTANT NUMBER := 30000;
   c_warn_reservas CONSTANT NUMBER := 90000;
   c_warn_plazas   CONSTANT NUMBER := 1200000;
@@ -53,7 +53,7 @@ DECLARE
   PROCEDURE set_fail(p_msg VARCHAR2) IS
   BEGIN
     v_status := 'FAIL';
-    add_msg('FAIL: ' || p_msg);
+    v_msgs := v_msgs || 'FAIL: ' || p_msg || CHR(10);
   END;
 
 BEGIN
@@ -91,21 +91,21 @@ BEGIN
     END IF;
   END IF;
 
-  -- Semantics: origen != destino
+  -- Semántica: origen != destino
   BEGIN
     SELECT COUNT(*) INTO v_bad_same
     FROM vuelos
     WHERE aer_id_aero = aer_id_aero_destino;
   EXCEPTION
     WHEN OTHERS THEN
-      v_bad_same := 0; -- If columns differ in some installations, skip.
+      v_bad_same := 0; -- Si las columnas difieren en algunas instalaciones, omitir.
   END;
 
   IF v_bad_same > 0 THEN
     set_fail('Hay '||v_bad_same||' vuelos con ORIGEN=DESTINO (debería ser 0).');
   END IF;
 
-  -- Constraints enabled (PK/FK)
+  -- Constraints habilitadas (PK/FK)
   SELECT COUNT(*) INTO v_disabled_cons
   FROM user_constraints
   WHERE constraint_type IN ('P','R')
@@ -115,7 +115,7 @@ BEGIN
     set_fail('Hay '||v_disabled_cons||' constraints PK/FK que no están ENABLED.');
   END IF;
 
-  -- Activity breadth
+  -- Amplitud de actividad
   BEGIN
     SELECT COUNT(DISTINCT a) INTO v_air_active
     FROM (
@@ -144,7 +144,7 @@ BEGIN
     set_warn('Agencias con reservas='||v_ag_active||' < '||c_warn_active_ag||' (distribución pobre).');
   END IF;
 
-  -- Skew check: top origin airport %
+  -- Verificación de sesgo: % top aeropuerto origen
   BEGIN
     SELECT MAX(pct) INTO v_top_pct
     FROM (
@@ -160,13 +160,13 @@ BEGIN
 
   IF v_top_pct IS NOT NULL THEN
     IF v_top_pct < 1 THEN
-      set_warn('Skew bajo: top aeropuerto origen='||TO_CHAR(v_top_pct,'FM9990D00')||'%.');
+      set_warn('Sesgo bajo: top aeropuerto origen='||TO_CHAR(v_top_pct,'FM9990D00')||'%.');
     ELSIF v_top_pct > 50 THEN
-      set_warn('Skew extremo: top aeropuerto origen='||TO_CHAR(v_top_pct,'FM9990D00')||'%.');
+      set_warn('Sesgo extremo: top aeropuerto origen='||TO_CHAR(v_top_pct,'FM9990D00')||'%.');
     END IF;
   END IF;
 
-  -- Print summary
+  -- Imprimir resumen
   dbms_output.put_line('Estado: '||v_status);
   dbms_output.put_line('Conteos: VUELOS='||v_vuelos||', RESERVAS='||v_reservas||', PLAZAS='||v_plazas);
   IF v_ratio IS NOT NULL THEN
@@ -179,7 +179,7 @@ BEGIN
     dbms_output.put_line('Agencias con reservas: '||v_ag_active);
   END IF;
   IF v_top_pct IS NOT NULL THEN
-    dbms_output.put_line('Skew (top origen %): '||TO_CHAR(v_top_pct,'FM9990D00'));
+    dbms_output.put_line('Sesgo (top origen %): '||TO_CHAR(v_top_pct,'FM9990D00'));
   END IF;
 
   IF v_msgs IS NOT NULL AND LENGTH(v_msgs) > 0 THEN
@@ -200,3 +200,4 @@ BEGIN
 end;
 /
 spool off
+

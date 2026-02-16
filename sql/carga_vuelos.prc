@@ -45,14 +45,23 @@ begin
               num_co number;
               num_ti number;
               num_ca number;
+              v_capacidad number;
           
           begin
               num_ae :=t_aeropuertos.count;
               num_co :=t_compania.count;
               num_ti :=t_tipos_vuelo.count;
               num_ca :=t_catering.count;
-                    
-              insert into vuelos( id_vuelo,
+              -- Capacidad de vuelo aleatória (50, 60, 100, 120)
+              -- mod 4 para elegir
+               case trunc(dbms_random.value(0,4))
+                 when 0 then v_capacidad := 50;
+                 when 1 then v_capacidad := 60;
+                 when 2 then v_capacidad := 100;
+                 else v_capacidad := 120;
+               end case;      
+
+               insert into vuelos( id_vuelo,
                               fecha_vuelo,
                               detalles,
                               aer_id_aero,
@@ -60,7 +69,7 @@ begin
                               comp_id_comp,
                               tvue_id_vuelo,
                               cat_id_catering,
-                              plazas_count)
+                              capacidad_avion)
              
               values (
                  contador_vuelos,
@@ -71,12 +80,7 @@ begin
                  t_compania   ((dbms_random.value)*num_co).id_comp,
                  t_tipos_vuelo((dbms_random.value)*num_ti).id_vuelo,
                  t_catering   ((dbms_random.value)*num_ca).id_catering,
-                 MOD(id_vuelo, 4)
-                    WHEN 0 THEN 50
-                    WHEN 1 THEN 60
-                    WHEN 2 THEN 100
-                    ELSE 120
-                  END;
+                 v_capacidad
                  );
      
                  contador_plazas:=0;
