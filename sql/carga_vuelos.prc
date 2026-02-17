@@ -84,7 +84,7 @@ begin
                  );
      
                  contador_plazas:=0;
-                 for y in 1..50
+                 for y in 1..v_capacidad
                  loop
                  dbms_output.put_line ('vuelo '||x);
                         contador_plazas:=contador_plazas+1;
