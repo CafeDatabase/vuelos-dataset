@@ -9,15 +9,17 @@ create or replace procedure carga_reservas is
      t_tres    tipo_tres;
      t_agencia tipo_agencia;
 
-     
      num_tr number;
      num_ag number;
+     total_vuelos number;
 
      v_nif varchar2(10);
                
 begin
      dbms_output.enable(100000);
      
+     select count(*) into total_vuelos from vuelos;
+
      select * 
      bulk collect into t_tres
      from tipos_reservas;
@@ -37,13 +39,13 @@ begin
  
            dbms_random.initialize(y.fila);     
            for z in 1..30
-           loop        
+           loop     
                    declare
                               v_reserva varchar2(10):='';
-                              v_plaza number:=((dbms_random.value)*50)+1;
-                              v_vuelo number:=((dbms_random.value)*100000)+1;
+                              v_plaza number:=((dbms_random.value)*120)+1;
+                              v_vuelo number:=((dbms_random.value)*total_vuelos)+1;
                    begin
-      
+                              
                               for x in 1..10 
                               loop
                                      v_reserva:=v_reserva||chr(65+

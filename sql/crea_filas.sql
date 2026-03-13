@@ -50,9 +50,9 @@ insert into estadoslaborales(id_el, cn_el) values ('IN','Inactivo');
 PROMPT Valores para la tabla EDADES
 PROMPT *********************************
 
-insert into edades(eda_id, id_edad, rango_edad) values (1,'JUV','Menores de 18 a�os');
-insert into edades(eda_id, id_edad, rango_edad) values (2,'ADU','Menores de 50 a�os');
-insert into edades(eda_id, id_edad, rango_edad) values (3,'VEJ','Mayores de 50 a�os');
+insert into edades(eda_id, id_edad, rango_edad) values (1,'JUV','Menores de 18 años');
+insert into edades(eda_id, id_edad, rango_edad) values (2,'ADU','Menores de 50 años');
+insert into edades(eda_id, id_edad, rango_edad) values (3,'VEJ','Mayores de 50 años');
 PROMPT Valores para la tabla TIPOS_RESERVAS
 PROMPT *********************************
 
@@ -160,8 +160,8 @@ insert into aeropuertos(id_aero, cn_aero, ciu_id_ciudad) values ('VCE','Venice M
 PROMPT Valores para la tabla AGENCIAS (GENERADO)
 PROMPT *********************************
 
-insert into agencias (id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
-select
+insert /*+NOPARALLEL */ into agencias (id_agencia, cn_agencia, ciu_id_ciudad, evia_id_emp_viaje)
+select 
   age_seq.nextval,
   -- Nombre neutro y consistente: <Empresa>-<Ciudad>
   replace(ev.cn_emp_viaje,' ','') || '_' || replace(c.cn_ciudad,' ',''),
